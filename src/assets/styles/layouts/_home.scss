@@ -1,60 +1,217 @@
-@use "../variables";
+@use "../variables" as vars;
+@use "../functions" as functions;
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  font-family: vars.$font-family-sans-serif;
+  font-size: functions.rem(16px);
+  line-height: 1.7;
+  background-color: vars.$color-background;
+  color: vars.$color-text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 6%;
+
+  &__brand {
+    font-size: functions.rem(13px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: functions.rem(13px);
+
+    a {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: vars.$color-accent;
+      }
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  gap: 3rem;
+  padding: 5rem 6%;
+
+  &__content {
+    align-self: center;
+  }
+
+  &__eyebrow,
+  .section__number {
+    color: vars.$color-accent;
+    font-size: functions.rem(12px);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  &__title {
+    margin: 1rem 0 0;
+    font-family: vars.$font-family-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  &__author {
+    margin-top: 0.5rem;
+    font-family: vars.$font-family-serif;
+    font-size: functions.rem(22px);
+  }
+
+  &__lead {
+    max-width: 420px;
+    margin-top: 2rem;
+    font-size: functions.rem(18px);
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background-color: vars.$color-neutral;
+
+    figure {
+      width: 100%;
+      max-width: 400px;
+      margin: 10%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      color: vars.$color-text;
+      font-size: functions.rem(11px);
+      line-height: 1.5;
+      opacity: 0.7;
+      text-align: left;
+    }
+
+  }
+}
+
+.section,
+.book-details {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 5rem 6%;
+
+  &__title {
+    max-width: 700px;
+    margin: 1rem 0 1.5rem;
+    font-family: vars.$font-family-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  &__text {
+    max-width: 650px;
+    font-size: functions.rem(17px);
+  }
+}
+
+.book-details {
+  &__list {
+    margin-top: 2rem;
+    border-top: 1px solid vars.$color-neutral;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid vars.$color-neutral;
+
+    dt {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+
+      i {
+        width: 18px;
+        color: vars.$color-accent;
+        text-align: center;
+      }
+    }
+
+    dd {
+      margin: 0;
+      text-align: right;
+    }
+  }
+}
+
+.site-footer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: variables.$font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: variables.$uoc-bg;
-  color: variables.$uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 4rem;
+  padding: 3rem 6%;
+  border-top: 1px solid vars.$color-neutral;
   text-align: center;
-  background-color: #fff;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  &__brand {
+    margin: 0;
+    font-size: functions.rem(12px);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
 
-  @media (min-width: variables.$mqMinWidth) {
-    max-width: none;
+  &__text {
+    margin: 0;
+    font-family: vars.$font-family-serif;
+    font-size: functions.rem(15px);
+  }
+
+  &__credits {
+    margin: 0.5rem 0 0;
+    color: vars.$color-text;
+    font-size: functions.rem(11px);
+    opacity: 0.65;
   }
 }
 
-.uoc-title {
-  font-family: variables.$font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: variables.$uoc-corporate;
-
-  @media (min-width: variables.$mqMinWidth) {
-    font-size: 36px;
+@media (min-width: vars.$mqMinWidth) {
+  .hero {
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    min-height: 650px;
   }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
 }

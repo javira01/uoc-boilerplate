@@ -1,36 +1,164 @@
 <!doctype html>
 
-<html>
+<html lang="es">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Una recomendación de lectura: Madame Bovary, de Gustave Flaubert." />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Madame Bovary — Una recomendación literaria</title>
   </head>
+
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">
-        Hello, UOC!<i class="fas fa-university"></i>
-      </h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header class="site-header">
+      <a class="site-header__brand" href="#inicio">LECTURAS / 001</a>
+
+      <nav class="site-header__nav" aria-label="Navegación principal">
+        <a href="#novela">La novela</a>
+        <a href="#emma">El personaje</a>
+        <a href="#recomendacion">Por qué leerla</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero__content">
+          <p class="hero__eyebrow">UNA RECOMENDACIÓN LITERARIA</p>
+          <h1 class="hero__title"><cite>Madame Bovary</cite></h1>
+          <p class="hero__author">Gustave Flaubert</p>
+          <p class="hero__lead">
+            Una vida imaginada. Una realidad que nunca está a la altura.
+          </p>
+        </div>
+
+      <div class="hero__image">
+        <figure>
+          <img
+            src="./assets/images/madame-bovary.webp"
+            alt="Emma Bovary en el baile, ilustración de Charles Léandre"
+          />
+          <figcaption>
+            Emma en travesti au bal, <time datetime="1931">1931</time>.<br />
+            Charles Léandre / Eugène Decisy.
+            Dominio público.
+          </figcaption>
+        </figure>
+      </div>
+      </section>
+
+      <section class="section" id="novela">
+        <p class="section__number">01 / LA NOVELA</p>
+        <h2 class="section__title">Una historia sobre el deseo y la insatisfacción</h2>
+        <p class="section__text">
+          Publicada en <time datetime="1857">1857</time>, <cite>Madame Bovary</cite> 
+          es <strong>una de las grandes novelas de Gustave Flaubert</strong>. A través 
+          de la vida de Emma, el autor construye un retrato de las aspiraciones, 
+          las frustraciones y las contradicciones de la sociedad de su tiempo.
+        </p>
+        <p class="section__text">
+          La obra destacó por su estilo narrativo y por la atención al detalle con 
+          la que Flaubert describe tanto los escenarios como los pensamientos de 
+          sus personajes. Su publicación <strong>provocó una gran polémica</strong> 
+          y llevó al autor a enfrentarse a un proceso judicial por inmoralidad.
+        </p>
+      </section>
+
+      <section class="section" id="argumento">
+        <p class="section__number">02 / EL ARGUMENTO</p>
+        <h2 class="section__title">Entre la fantasía y la realidad</h2>
+        <p class="section__text">
+          Emma Bovary <strong>desea una vida apasionada y extraordinaria</strong>, 
+          muy alejada de la monotonía de su entorno. Su búsqueda de emociones 
+          y de una existencia diferente la llevará a tomar decisiones que cambiarán
+          su destino.
+        </p>
+        <p class="section__text">
+          Tras casarse con Charles Bovary, un médico de provincias, Emma 
+          <strong>descubre que el matrimonio y la vida cotidiana no se 
+          parecen a las historias románticas</strong> que ha imaginado. En su 
+          intento por escapar de esa realidad, se adentra en relaciones amorosas 
+          y gastos que acabarán teniendo graves consecuencias.
+        </p>
+      </section>
+
+      <section class="section" id="emma">
+        <p class="section__number">03 / EL PERSONAJE</p>
+        <h2 class="section__title">Emma Bovary</h2>
+        <p class="section__text">
+          <strong>Inconformista, soñadora y contradictoria</strong>, Emma es 
+          un personaje que sigue generando preguntas. Sus deseos chocan 
+          constantemente con los límites sociales y personales que encuentra 
+          a su alrededor.
+        </p>
+        <p class="section__text">
+          Su carácter está marcado por una imaginación alimentada por las novelas 
+          románticas que ha leído. Emma <strong>busca en el amor, el lujo 
+          y las apariencias una forma de alcanzar la felicidad</strong>, 
+          pero ninguna de esas experiencias consigue satisfacer sus expectativas 
+          durante demasiado tiempo.
+        </p>
+      </section>
+
+      <section class="section" id="recomendacion">
+        <p class="section__number">04 / POR QUÉ LEERLA</p>
+        <h2 class="section__title">Una novela que sigue interpelándonos</h2>
+        <p class="section__text">
+          Más allá de su contexto histórico, <cite>Madame Bovary</cite> habla de algo
+          reconocible: <strong>la distancia entre la vida que tenemos y la que
+          imaginamos</strong>. Una lectura especialmente interesante por la 
+          precisión de su escritura y la complejidad de sus personajes.
+        </p>
+        <p class="section__text">
+          También invita a reflexionar sobre <strong>la influencia de las expectativas 
+          culturales, el peso de las convenciones sociales y la dificultad de 
+          encontrar satisfacción</strong> en una realidad que nunca parece estar a la 
+          altura de nuestros deseos. Su vigencia es una de las razones por las 
+          que continúa siendo una lectura imprescindible.
+        </p>
+      </section>
+
+      <section class="book-details">
+        <p class="section__number">05 / FICHA DEL LIBRO</p>
+        <h2 class="section__title">La obra</h2>
+
+        <dl class="book-details__list">
+          <div class="book-details__item">
+            <dt>
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+              Autor
+            </dt>
+            <dd>Gustave Flaubert</dd>
+          </div>
+
+          <div class="book-details__item">
+            <dt>
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              Publicación
+            </dt>
+            <dd><time datetime="1857">1857</time></dd>
+          </div>
+
+          <div class="book-details__item">
+            <dt>
+              <i class="fa-solid fa-book" aria-hidden="true"></i>
+              Género
+            </dt>
+            <dd>Novela realista</dd>
+          </div>
+
+          <div class="book-details__item">
+            <dt>
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+              Idioma original
+            </dt>
+            <dd>Francés</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
